@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E54D0757-552B-45D7-9D16-ADF419B47DCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GModIDE</RootNamespace>
+    <AssemblyName>GModIDE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GModIDE.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AP.Scripting">
+      <HintPath>D:\Documents\Visual Studio 2010\Projects\AP.Scripting\AP.Scripting\bin\Debug\AP.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="AwesomePixel">
+      <HintPath>..\..\..\Documents\Visual Studio 2012\Projects\AP.Shared\bin\Debug\AwesomePixel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Core\EditorManager.cs" />
+    <Compile Include="Classes\Core\ErrorHandler.cs" />
+    <Compile Include="Classes\Core\SettingsManager.cs" />
+    <Compile Include="Classes\Core\Util.cs" />
+    <Compile Include="Classes\Core\SilkHandler.cs" />
+    <Compile Include="Classes\Exceptions\LanguagePackExceptions.cs" />
+    <Compile Include="Classes\Language\LanguageManager.cs" />
+    <Compile Include="Classes\Language\LanguagePack.cs" />
+    <Compile Include="Classes\Core\Compressor.cs" />
+    <Compile Include="Classes\Loading\PreLoad.cs" />
+    <Compile Include="Classes\Loading\LoadManager.cs" />
+    <Compile Include="Classes\Loading\LoadTask.cs" />
+    <Compile Include="Classes\Loading\Tasks\EditorInit.cs" />
+    <Compile Include="Classes\Loading\Tasks\PluginInit.cs" />
+    <Compile Include="Classes\Loading\Tasks\InitLanguage.cs" />
+    <Compile Include="Classes\Loading\Tasks\PluginLanguagePacks.cs" />
+    <Compile Include="Classes\Loading\Tasks\ProductRegister.cs" />
+    <Compile Include="Classes\Plugins\LoadTaskWrapper.cs" />
+    <Compile Include="Classes\Plugins\PluginData.cs" />
+    <Compile Include="Classes\Plugins\PluginHost.cs" />
+    <Compile Include="Classes\Plugins\PluginManager.cs" />
+    <Compile Include="Classes\Plugins\SettingsHost.cs" />
+    <Compile Include="Classes\Plugins\UtilsHost.cs" />
+    <Compile Include="Classes\Workspace\Workspace.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Controls\ProgressBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Controls\WizardPageCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Dialogs\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Dialogs\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\StubDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Dialogs\StubDialog.Designer.cs">
+      <DependentUpon>StubDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Dialogs\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Wizards\FirstTimeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Wizards\FirstTimeWizard.Designer.cs">
+      <DependentUpon>FirstTimeWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Wizards\Wizard.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\Dialogs\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Dialogs\StubDialog.resx">
+      <DependentUpon>StubDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Dialogs\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Wizards\FirstTimeWizard.resx">
+      <DependentUpon>FirstTimeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fireball.Core\Fireball.Core.csproj">
+      <Project>{0CDB9271-E9F1-4083-B428-EDC5039D325D}</Project>
+      <Name>Fireball.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball.Docking\Fireball.Docking.csproj">
+      <Project>{113BAFB0-1E69-4992-9302-E66D6E6D2CF5}</Project>
+      <Name>Fireball.Docking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GModIDE.PluginConnector\GModIDE.PluginConnector.csproj">
+      <Project>{194646B9-FCFA-4EA4-92E9-15ECD57F2310}</Project>
+      <Name>GModIDE.PluginConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\DockingWindows\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{113BAFB0-1E69-4992-9302-E66D6E6D2CF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fireball.Docking</RootNamespace>
+    <AssemblyName>Fireball.Docking</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DragForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\MdiClientController.cs" />
+    <Compile Include="Controls\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\AutoHidePane.cs" />
+    <Compile Include="Docking\AutoHidePaneCollection.cs" />
+    <Compile Include="Docking\AutoHideStateCollection.cs" />
+    <Compile Include="Docking\AutoHideStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\AutoHideStripVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\AutoHideStripVS2005.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\AutoHideTab.cs" />
+    <Compile Include="Docking\AutoHideTabCollection.cs" />
+    <Compile Include="Docking\AutoHideTabVS2003.cs" />
+    <Compile Include="Docking\AutoHideTabVS2005.cs" />
+    <Compile Include="Docking\AutoHideWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\AutoHideWindowSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DisplayingDockList.cs" />
+    <Compile Include="Docking\DockableWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\DockAreasEditor.cs" />
+    <Compile Include="Docking\DockContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockContentCollection.cs" />
+    <Compile Include="Docking\DockContentHandler.cs" />
+    <Compile Include="Docking\DockHelper.cs" />
+    <Compile Include="Docking\DockIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\DockList.cs" />
+    <Compile Include="Docking\DockOutline.cs" />
+    <Compile Include="Docking\DockOutlineBase.cs" />
+    <Compile Include="Docking\DockPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCaptionBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCaptionVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCaptionVS2005.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCollection.cs" />
+    <Compile Include="Docking\DockPanelExtender.cs" />
+    <Compile Include="Docking\DockPanelPersist.cs" />
+    <Compile Include="Docking\DockPaneSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneStripVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneStripVS2005.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneTab.cs" />
+    <Compile Include="Docking\DockPaneTabCollection.cs" />
+    <Compile Include="Docking\DockPaneTabVS2003.cs" />
+    <Compile Include="Docking\DockPaneTabVS2005.cs" />
+    <Compile Include="Docking\DockWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockWindowCollection.cs" />
+    <Compile Include="Docking\DockWindowSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DragHandler.cs" />
+    <Compile Include="Docking\DragHandlerBase.cs" />
+    <Compile Include="Docking\DummyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\Enums.cs" />
+    <Compile Include="Docking\EventArgs.cs" />
+    <Compile Include="Docking\FloatWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\FloatWindowCollection.cs" />
+    <Compile Include="Docking\Interfaces.cs" />
+    <Compile Include="Docking\Measures.cs" />
+    <Compile Include="Docking\NestedDockingStatus.cs" />
+    <Compile Include="Docking\SplitterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\SplitterOutline.cs" />
+    <Compile Include="Helpers\DrawHelper.cs" />
+    <Compile Include="Helpers\Localization.cs" />
+    <Compile Include="Helpers\LocalWindowsHook.cs" />
+    <Compile Include="Helpers\ResourceHelper.cs" />
+    <Compile Include="Helpers\Win32Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32\Enums.cs" />
+    <Compile Include="Win32\Gdi32.cs" />
+    <Compile Include="Win32\Kernel32.cs" />
+    <Compile Include="Win32\Structs.cs" />
+    <Compile Include="Win32\User32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\CodeDoc\InertButton.xml" />
+    <Content Include="Docking\CodeDoc\AutoHidePane.xml" />
+    <Content Include="Docking\CodeDoc\AutoHidePaneCollection.xml" />
+    <Content Include="Docking\CodeDoc\AutoHideStripBase.xml" />
+    <Content Include="Docking\CodeDoc\AutoHideStripVS2003.xml" />
+    <Content Include="Docking\CodeDoc\AutoHideTab.xml" />
+    <Content Include="Docking\CodeDoc\AutoHideTabCollection.xml" />
+    <Content Include="Docking\CodeDoc\DisplayingDockList.xml" />
+    <Content Include="Docking\CodeDoc\DockContent.xml" />
+    <Content Include="Docking\CodeDoc\DockContentCollection.xml" />
+    <Content Include="Docking\CodeDoc\DockContentHandler.xml" />
+    <Content Include="Docking\CodeDoc\DockList.xml" />
+    <Content Include="Docking\CodeDoc\DockPane.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneCaptionBase.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneCaptionVS2003.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneCollection.xml" />
+    <Content Include="Docking\CodeDoc\DockPanel.xml" />
+    <Content Include="Docking\CodeDoc\DockPanelExtender.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneStripBase.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneStripVS2003.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneTab.xml" />
+    <Content Include="Docking\CodeDoc\DockPaneTabCollection.xml" />
+    <Content Include="Docking\CodeDoc\DockWindow.xml" />
+    <Content Include="Docking\CodeDoc\DockWindowCollection.xml" />
+    <Content Include="Docking\CodeDoc\Enums.xml" />
+    <Content Include="Docking\CodeDoc\EventArgs.xml" />
+    <Content Include="Docking\CodeDoc\FloatWindow.xml" />
+    <Content Include="Docking\CodeDoc\FloatWindowCollection.xml" />
+    <Content Include="Docking\CodeDoc\Interfaces.xml" />
+    <Content Include="Docking\CodeDoc\NestedDockingStatus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Docking\DockContainer.resx">
+      <DependentUpon>DockContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docking\DockWindow.resx">
+      <DependentUpon>DockWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fireball.Core\Fireball.Core.csproj">
+      <Project>{0CDB9271-E9F1-4083-B428-EDC5039D325D}</Project>
+      <Name>Fireball.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
