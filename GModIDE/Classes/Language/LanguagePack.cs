@@ -34,7 +34,7 @@ namespace GModIDE.Classes
         /// <summary>
         /// The current version
         /// </summary>
-        public const int LPVERSION = 1;
+        public static int LPVERSION = 1;
 
         /// <summary>
         /// Name of language pack
